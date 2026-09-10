@@ -8,8 +8,9 @@ public class ExceptionHandlingTest
         {
             DoSomething();
         }
-        catch (Exception)
+        catch (Exception ex)
         {
+            Console.WriteLine($"Error processing data: {ex.Message}");
         }
     }
 
@@ -21,7 +22,7 @@ public class ExceptionHandlingTest
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Error");
+            Console.WriteLine($"Error loading data: {ex.Message}");
         }
     }
 
@@ -31,8 +32,9 @@ public class ExceptionHandlingTest
         {
             DoSomething();
         }
-        catch
+        catch (Exception ex)
         {
+            Console.WriteLine($"Error saving data: {ex.Message}");
             throw;
         }
     }
