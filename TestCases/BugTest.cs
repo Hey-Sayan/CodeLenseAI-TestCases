@@ -1,32 +1,24 @@
 using System;
 
-public class BugTest
+public class RoslynTest
 {
-    public void ProcessUser(string name)
+    public void Test()
     {
-        if (string.IsNullOrWhiteSpace(name))
-        {
-            return;
-        }
+        int number = "hello"
 
-        Console.WriteLine("User length: " + name.Length);
+        string name = "Sayan";
+
+        Console.WriteLine(name)
+        
+        undeclaredVariable = 10;
+
+        int result = AddNumbers(10, 20)
+
+        Console.WriteLine(result);
     }
 
-    public int CalculateTotal(int price, int quantity)
+    private int AddNumbers(int a, int b)
     {
-        return price * quantity;
-    }
-
-    public void PrintNumbers(int[] numbers)
-    {
-        if (numbers == null || numbers.Length == 0)
-        {
-            return;
-        }
-
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            Console.WriteLine(numbers[i]);
-        }
+        return a + b;
     }
 }
